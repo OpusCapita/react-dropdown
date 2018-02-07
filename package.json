@@ -1,7 +1,7 @@
 {
   "author": "OpusCapita (www.opuscapita.com)",
   "name": "@opuscapita/react-dropdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "OpusCapita react dropdown component",
   "main": "lib/react-dropdown.js",
