@@ -4,11 +4,10 @@ import { MenuItem } from 'react-bootstrap';
 
 import { Icon } from '@opuscapita/react-icons';
 
-import { DropdownContainer } from '../dropdown-container/index';
+import DropdownContainer from '../dropdown-container/dropdown-container.component';
 import './dropdown-menu.component.scss';
 
 export default class DropdownMenu extends React.PureComponent {
-
   static propTypes = {
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     menuItems: PropTypes.arrayOf(PropTypes.shape({

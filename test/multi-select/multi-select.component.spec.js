@@ -5,8 +5,7 @@ import { mount } from 'enzyme';
 import { List } from 'immutable';
 import sinon from 'sinon';
 
-import { MultiSelect } from '../../src/multi-select/index';
-
+import MultiSelect from '../../src/multi-select/multi-select.component';
 
 describe('MultiSelect component', function describe() {
   it('should render and function correctly', function it() {
@@ -24,8 +23,8 @@ describe('MultiSelect component', function describe() {
       ],
     };
     const wrapper = mount(<MultiSelect {...props} />);
-    expect(wrapper.find('.oc-multi-select-item-checkbox').length).to.eql(2);
-    expect(wrapper.find('.oc-multi-select-item-label').at(0).text()).to.eql('Item 1');
+    expect(wrapper.find('.oc-multi-select-item-checkbox').hostNodes().length).to.eql(2);
+    expect(wrapper.find('.oc-multi-select-item-checkbox span').at(0).text()).to.eql('Item 1');
     expect(wrapper.instance().isChecked(1, List())).to.be.false;
     let spy;
     spy = sinon.spy(wrapper.instance(), 'handleChange');

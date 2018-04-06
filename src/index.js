@@ -1,3 +1,3 @@
-export * from './dropdown-container/index.js';
-export * from './dropdown-menu/index.js';
-export * from './dropdown-multi-select/index.js';
+export DropdownContainer from './dropdown-container/dropdown-container.component';
+export DropdownMenu from './dropdown-menu/dropdown-menu.component';
+export DropdownMultiSelect from './dropdown-multi-select/dropdown-multi-select.component';

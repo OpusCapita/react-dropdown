@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 import { List } from 'immutable';
 import sinon from 'sinon';
 
-import { DropdownMultiSelect } from '../../src/dropdown-multi-select/index';
+import { DropdownMultiSelect } from '../../src/index';
 
 
 describe('DropdownMultiSelect component', function describe() {
@@ -16,22 +16,22 @@ describe('DropdownMultiSelect component', function describe() {
       id: 'dropdownMultiSelectExample',
       items: [
         {
-          value: 1,
+          value: 'Item_1',
           label: 'Item 1',
         },
         {
-          value: 2,
+          value: 'Item_2',
           label: 'Item 2',
         },
       ],
       onChange: sinon.spy(),
     };
     const wrapper = mount(<DropdownMultiSelect {...props} />);
-    expect(wrapper.find('.oc-multi-select-item-checkbox').length).to.eql(2);
-    expect(wrapper.find('.oc-multi-select-item-label').at(0).text()).to.eql('Item 1');
-    wrapper.find('#2').simulate('change');
+    expect(wrapper.find('.oc-multi-select-item-checkbox').hostNodes().length).to.eql(2);
+    expect(wrapper.find('.oc-multi-select-item-checkbox span').at(0).text()).to.eql('Item 1');
+    wrapper.find('.oc-checkbox .icon').at(0).simulate('click');
     expect(props.onChange.called).to.be.true;
-    wrapper.find('.oc-input-group-icon-remove').simulate('click');
+    wrapper.find('.oc-input-group-icon-remove').hostNodes().simulate('click');
     expect(props.onChange.called).to.be.true;
     expect(wrapper.instance().getPlaceholder(List(), props.items, props.defaultPlaceholder)).to.eql('0 selected');
     let spy;

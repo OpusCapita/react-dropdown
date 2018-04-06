@@ -7,13 +7,12 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import { List } from 'immutable';
 
 import KEY_CODES from '../constants/key-codes.constant';
-import { DropdownContainer } from '../dropdown-container/index';
-import { MultiSelect } from '../multi-select/index';
+import DropdownContainer from '../dropdown-container/dropdown-container.component';
+import MultiSelect from '../multi-select/multi-select.component';
 import TitleInput from './title-input/title-input.component.jsx';
 import './dropdown-multi-select.component.scss';
 
 export default class DropdownMultiSelect extends React.PureComponent {
-
   static propTypes = {
     checkedItems: ImmutablePropTypes.list,
     defaultPlaceholder: PropTypes.string,

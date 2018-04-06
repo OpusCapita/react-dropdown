@@ -6,8 +6,7 @@ import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
 
-import { DropdownContainer } from '../../src/dropdown-container/index';
-
+import { DropdownContainer } from '../../src/index';
 
 describe('DropdownContainer component', function describe() {
   it('should render correctly', function it() {
@@ -21,7 +20,7 @@ describe('DropdownContainer component', function describe() {
       <DropdownContainer {...props} />,
     );
 
-    expect(wrapper.find('#dropdownContainerExample').text()).to.eql('Dropdown ');
+    expect(wrapper.find('#dropdownContainerExample').hostNodes().text()).to.eql('Dropdown ');
     expect(wrapper.find('.caret')).to.exist;
   });
 });
