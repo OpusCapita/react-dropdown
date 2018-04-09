@@ -9,7 +9,7 @@ import { List } from 'immutable';
 import KEY_CODES from '../constants/key-codes.constant';
 import DropdownContainer from '../dropdown-container/dropdown-container.component';
 import MultiSelect from '../multi-select/multi-select.component';
-import TitleInput from './title-input/title-input.component.jsx';
+import TitleInput from './title-input/title-input.component';
 import './dropdown-multi-select.component.scss';
 
 export default class DropdownMultiSelect extends React.PureComponent {

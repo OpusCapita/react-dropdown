@@ -7,7 +7,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import KEY_CODES from '../constants/key-codes.constant';
 import MultiSelectItem from
-  './multi-select-item/multi-select-item.component.jsx';
+  './multi-select-item/multi-select-item.component';
 import './multi-select.component.scss';
 
 export default class MultiSelect extends React.PureComponent {
