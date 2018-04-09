@@ -36,20 +36,18 @@ describe('DropdownMenu component', function describe() {
   });
 
   it('should render correctly', function it() {
-    const wrapper = mount(
-      <DropdownMenu id="example" menuItems={this.menuItems} />,
-    );
+    const wrapper = mount(<DropdownMenu id="example" menuItems={this.menuItems} />);
     expect(wrapper.find(MenuItem).at(0).text()).to.eql('Item 1, dont\'t close');
     expect(wrapper.find(MenuItem).at(1).text()).to.eql('Item 2');
     expect(wrapper.find(MenuItem).at(2).text()).to.eql('');
     expect(wrapper.find(MenuItem).at(3).text()).to.eql('Item 3');
 
-    wrapper.find('#item_id_1').simulate('click');
+    wrapper.find('#item_id_1').hostNodes().simulate('click');
     expect(this.menuItems[0].onClick.called).to.be.true;
 
     expect(wrapper.find(MenuItem).at(3).props().disabled).to.eql(true);
 
-    wrapper.find('#item_id_3').simulate('click');
+    wrapper.find('#item_id_3').hostNodes().simulate('click');
     expect(this.menuItems[3].onClick.called).to.be.false;
   });
 });

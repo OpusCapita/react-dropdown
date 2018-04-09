@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Checkbox } from 'react-bootstrap';
-
-import './multi-select-item.component.scss';
+import Checkbox from '@opuscapita/react-checkbox';
 
 export default class MultiSelectItem extends React.PureComponent {
 
@@ -42,11 +40,8 @@ export default class MultiSelectItem extends React.PureComponent {
         id={item.value}
         onChange={this.onChange}
         onKeyDown={this.onKeyDown}
-      >
-        <span className="oc-multi-select-item-label">
-          {item.label}
-        </span>
-      </Checkbox>
+        label={item.label}
+      />
     );
   }
 }

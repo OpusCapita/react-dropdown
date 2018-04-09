@@ -2,6 +2,10 @@
 
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
+## <next>
+* Used @opuscapita/react-checkbox
+* Updated according to @opuscapita/react-component-template
+
 ## 1.0.2
 * Update @opuscapita/react-icons to 2.0.3
 
