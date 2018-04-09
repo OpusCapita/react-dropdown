@@ -3,6 +3,8 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* Fixed invalid imports
+* Moved react-immutable-proptypes to dependencies
 
 ## 2.0.0
 * Used @opuscapita/react-checkbox
