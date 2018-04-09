@@ -23,7 +23,8 @@ Also you need to configure sass loader, since all the styles are in sass format.
 
 ### API
 
-DropdownContainer
+#### DropdownContainer
+
 | Prop name                | Type              | Default                                  | Description                              |
 | ------------------------ | ----------------- | ---------------------------------------- | ---------------------------------------- |
 | id                       | number or string  | required                                 | Unique HTML id attribute                 |
@@ -38,26 +39,20 @@ DropdownContainer
 | style                    | object            | { bsSize: 'xs', bsStyle: 'info' }        | Custom style for the dropdown            |
 | useAnchor                | boolean           | false                                    | If true, title is anchor                 |
 
-DropdownMenu
+#### DropdownMenu
+
 | Prop name                | Type              | Default                                  | Description                              |
 | ------------------------ | ----------------- | ---------------------------------------- | ---------------------------------------- |
 | id                       | number or string  | required                                 | Unique HTML id attribute                 |
-| menuItems                | array of MenuItems | required                                 | List of the dropdown menu items          |
-| menuItems.disabled       | boolean           |                                          | Is dropdown menu item disabled           |
-| menuItems.disableClosing | boolean           |                                          | Is dropdown menu item's closing disabled |
-| menuItems.href           | string            |                                          | Hyperlink of the dropdown menu item      |
-| menuItems.icon           | element           |                                          | Icon of the dropdown menu item           |
-| menuItems.id             | number or string  |                                          | Unique HTML id attribute                 |
-| menuItems.onClick        | function          |                                          | Callback function of click               |
-| menuItems.title          | number, string or element |                                  | Title of the dropdown menu item          |
-| menuItems.type           | string            |                                          | Enumeration either 'item' or 'divider'   |
+| menuItems                | array of menu items | required                               | List of the dropdown menu items          |
 | caret                    | boolean           | false                                    | If true, caret is show                   |
 | disabled                 | boolean           | false                                    | Is dropdown disabled or not              |
 | dropup                   | boolean           | false                                    | Is dropup or dropdown                    |
 | pullLeft                 | boolean           | false                                    | If false, dropdown is aligned on right, otherwise on left |
 | title                    | number, string or element | <Icon type="indicator" name="more" width={32} height={32} /> | Title of the dropdown |
 
-MenuItems
+#### DropdownMenu - `menuItems` prop attributes
+
 | Prop name                | Type              | Default                                  | Description                              |
 | ------------------------ | ----------------- | ---------------------------------------- | ---------------------------------------- |
 | disabled                 | boolean           |                                          | Is dropdown menu item disabled           |
@@ -69,17 +64,19 @@ MenuItems
 | title                    | number, string or element |                                  | Title of the dropdown menu item          |
 | type                     | string            |                                          | Enumeration either 'item' or 'divider'   |
            
-DropdownMultiSelect
+#### DropdownMultiSelect
+
 | Prop name                | Type              | Default                                  | Description                              |
 | ------------------------ | ----------------- | ---------------------------------------- | ---------------------------------------- |
 | id                       | number or string  | required                                 | Unique HTML id attribute                 |
-| items                    | array of Items    | required                                 | Dropdown menu items                      |
+| items                    | array of items    | required                                 | Dropdown menu items                      |
 | checkedItems             | List              | empty list                               | Checked items                            |
 | defaultPlaceholder       | string            | '{N} items selected'                     | Default placeholder                      |
 | onChange                 | function          | empty function                           | Callback function of checked change      |
 | tabIndex                 | number or string  | 1                                        | tabIndex attribute                       |
 
-Items
+#### DropdownMultiSelect - `items` prop attributes
+
 | Prop name                | Type              | Default                                  | Description                              |
 | ------------------------ | ----------------- | ---------------------------------------- | ---------------------------------------- |
 | label                    | string            |                                          | Label of the dropdown menu item          |
