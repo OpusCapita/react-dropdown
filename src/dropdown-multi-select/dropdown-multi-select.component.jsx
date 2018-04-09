@@ -17,17 +17,15 @@ export default class DropdownMultiSelect extends React.PureComponent {
     checkedItems: ImmutablePropTypes.list,
     defaultPlaceholder: PropTypes.string,
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        labelPlaceholder: PropTypes.string,
-        value: PropTypes.oneOfType([
-          PropTypes.bool,
-          PropTypes.number,
-          PropTypes.string,
-        ]).isRequired,
-      }),
-    ).isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      labelPlaceholder: PropTypes.string,
+      value: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.number,
+        PropTypes.string,
+      ]).isRequired,
+    })).isRequired,
     onChange: PropTypes.func,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   };

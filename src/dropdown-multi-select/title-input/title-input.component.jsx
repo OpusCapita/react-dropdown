@@ -7,7 +7,6 @@ import { Icon } from '@opuscapita/react-icons';
 import './title-input.component.scss';
 
 export default class TitleInput extends React.PureComponent {
-
   static propTypes = {
     input: PropTypes.element.isRequired,
     onClear: PropTypes.func,

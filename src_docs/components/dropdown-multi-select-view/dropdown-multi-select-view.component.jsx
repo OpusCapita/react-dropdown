@@ -4,7 +4,6 @@ import { List } from 'immutable';
 import { DropdownMultiSelect } from '../../../src/index';
 
 export default class DropdownMultiSelectView extends React.PureComponent {
-
   constructor(props) {
     super(props);
     this.state = { checkedItems: List() };
@@ -35,7 +34,7 @@ export default class DropdownMultiSelectView extends React.PureComponent {
     const componentStyle = {
       width: '16rem',
     };
-    const checkedItems = this.state.checkedItems;
+    const { checkedItems } = this.state;
     return (
       <div style={containerStyle}>
         <div style={componentStyle}>

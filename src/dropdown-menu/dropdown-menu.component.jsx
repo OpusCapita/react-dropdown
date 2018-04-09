@@ -82,7 +82,13 @@ export default class DropdownMenu extends React.PureComponent {
     });
 
   render() {
-    const { menuItems, caret, pullLeft, ...otherProps } = this.props;
+    const {
+      menuItems,
+      caret,
+      pullLeft,
+      ...otherProps
+    } = this.props;
+
     return (
       <div className="oc-dropdown-menu">
         <DropdownContainer

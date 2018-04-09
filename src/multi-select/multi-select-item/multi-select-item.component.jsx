@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Checkbox from '@opuscapita/react-checkbox';
 
 export default class MultiSelectItem extends React.PureComponent {
-
   static propTypes = {
     item: PropTypes.shape({
       label: PropTypes.string.isRequired,

@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
@@ -11,20 +11,17 @@ import MultiSelectItem from
 import './multi-select.component.scss';
 
 export default class MultiSelect extends React.PureComponent {
-
   static propTypes = {
     checkedItems: ImmutablePropTypes.list,
     isFocused: PropTypes.bool,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        value: PropTypes.oneOfType([
-          PropTypes.bool,
-          PropTypes.number,
-          PropTypes.string,
-        ]).isRequired,
-      }),
-    ).isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      value: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.number,
+        PropTypes.string,
+      ]).isRequired,
+    })).isRequired,
     onChange: PropTypes.func,
     onParentFocus: PropTypes.func,
   };
@@ -43,7 +40,7 @@ export default class MultiSelect extends React.PureComponent {
 
   componentWillReceiveProps(nextProps) {
     // focus on the first item if a parent component calls to move focus on it
-    const items = this.props.items;
+    const { items } = this.props;
     if (nextProps.isFocused && !this.props.isFocused && items.length > 0) {
       this.setState({ focusedIndex: -1, focusedItem: null }, () => {
         const element = document.getElementById(items[0].value);
@@ -54,7 +51,7 @@ export default class MultiSelect extends React.PureComponent {
   }
 
   focusItem = (inc = 0) => {
-    const items = this.props.items;
+    const { items } = this.props;
     if (items.length === 0) return;
     const newIndex = this.state.focusedIndex + inc;
     if (newIndex > -1 && newIndex < items.length) {
@@ -111,7 +108,7 @@ export default class MultiSelect extends React.PureComponent {
 
   render() {
     const { items, checkedItems } = this.props;
-    const focusedItem = this.state.focusedItem;
+    const { focusedItem } = this.state;
     return (
       <div className="oc-multi-select">
         {items.map((item) => {
