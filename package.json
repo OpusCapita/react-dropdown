@@ -100,7 +100,7 @@
   },
   "dependencies": {
     "@opuscapita/oc-cm-common-styles": "2.0.4",
-    "@opuscapita/react-checkbox": "1.1.2",
+    "@opuscapita/react-checkbox": "1.1.4",
     "@opuscapita/react-icons": "^2.0.3",
     "react-immutable-proptypes": "2.1.0"
   },

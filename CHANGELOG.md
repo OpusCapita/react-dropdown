@@ -3,6 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* Updated @opuscapita/react-checkbox version
 
 ## 2.1.1
 * Updated @opuscapita/react-checkbox version
