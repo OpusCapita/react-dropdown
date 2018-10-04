@@ -3,6 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* DropdownMultiSelect search: escaped special characters
 
 ## 2.1.2
 * Updated @opuscapita/react-checkbox version
