@@ -1,4 +1,5 @@
 /* eslint-disable import/extensions */
+/* eslint-disable no-useless-escape */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -75,7 +76,10 @@ export default class DropdownMultiSelect extends React.PureComponent {
   }
 
   filterItems = (items) => {
-    const filterValue = this.state.filterValue.replace(/\s/g, '').toLowerCase();
+    const filterValue = this.state.filterValue
+      .replace(/\s/g, '') // removes space characters
+      .replace(/[\?\*\[\]\(\)\{\}\\\^\$]/g, '\\$&') // escape special characters
+      .toLowerCase();
     return items.filter(i => i.label.replace(/\s/g, '').toLowerCase().match(filterValue) !== null);
   }
 
