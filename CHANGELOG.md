@@ -3,6 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* DropdownMultiSelect search: escaped plus
 
 ## 2.1.3
 * DropdownMultiSelect search: escaped special characters
