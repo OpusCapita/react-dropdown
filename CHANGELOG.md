@@ -3,6 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* Changed dropdown toggle buttoon height 37px -> 34px
 
 ## 2.1.4
 * DropdownMultiSelect search: escaped plus
