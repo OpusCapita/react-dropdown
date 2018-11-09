@@ -4,6 +4,9 @@
 
 ## <next>
 
+## 2.2.0
+* package.json dependencies updated to fix issues reported by npm audit and to support CSP
+
 ## 2.1.5
 * Changed dropdown toggle buttoon height 37px -> 34px
 
