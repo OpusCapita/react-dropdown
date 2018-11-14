@@ -32,7 +32,11 @@ export default class DropdownMenu extends React.PureComponent {
     disabled: false,
     dropup: false,
     pullLeft: false,
-    title: <Icon type="indicator" name="more" width={32} height={32} />,
+    title: (
+      <div style={{ padding: '6px 7px 3px' }}>
+        <Icon type="indicator" name="more" width={20} height={20} />
+      </div>
+    ),
   };
 
   constructor(props) {

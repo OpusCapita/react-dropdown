@@ -34,7 +34,11 @@ function DropdownMenuView() {
       id: 'item_id_12',
       title: 'Item 2, with the icon',
       onClick: () => console.log('Item 2 clicked'),
-      icon: <Icon type="indicator" name="ok" width={25} height={25} />,
+      icon: (
+        <div style={{ padding: '3px 3px' }}>
+          <Icon type="indicator" name="ok" width={13} height={13} />
+        </div>
+      ),
     },
     {
       id: 'item_id_d1',
