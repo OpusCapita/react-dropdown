@@ -25,12 +25,14 @@ export default class TitleInput extends React.PureComponent {
           className="oc-input-group-icon-remove"
           onClick={onClear}
         >
-          <Icon
-            type="indicator"
-            name="remove"
-            width={17}
-            height={17}
-          />
+          <div style={{ padding: '0 4px' }}>
+            <Icon
+              type="indicator"
+              name="remove"
+              width={9}
+              height={9}
+            />
+          </div>
         </InputGroup.Addon>
       </InputGroup>
     );

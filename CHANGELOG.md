@@ -4,6 +4,10 @@
 
 ## <next>
 
+## 2.2.1
+* Upgrade all packages that can be upgraded
+* Adjust icon paddings, because margins were removed from SVG's
+
 ## 2.2.0
 * package.json dependencies updated to fix issues reported by npm audit and to support CSP
 

@@ -25,7 +25,7 @@ function DropdownContainerView() {
         title="Dropdown title"
       >
         <div style={contentStyle}>
-          CONTENT
+          Here is some content for the dropdown
         </div>
       </DropdownContainer>
     </div>
