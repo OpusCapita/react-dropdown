@@ -112,7 +112,8 @@
   "dependencies": {
     "@opuscapita/oc-cm-common-styles": "3.0.0",
     "@opuscapita/react-checkbox": "1.2.1",
-    "@opuscapita/react-icons": "3.0.3"
+    "@opuscapita/react-icons": "3.0.3",
+    "react-icons": "3.6.1"
   },
   "repository": {
     "type": "git",

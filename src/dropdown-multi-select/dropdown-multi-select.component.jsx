@@ -124,6 +124,7 @@ export default class DropdownMultiSelect extends React.PureComponent {
       tabIndex,
       ...otherProps
     } = this.props;
+    const { isOpen } = this.state;
     const input = (
       <FormControl
         className="oc-input-group-input"
@@ -141,6 +142,7 @@ export default class DropdownMultiSelect extends React.PureComponent {
       <TitleInput
         input={input}
         onClear={this.handleClear}
+        isOpen={isOpen}
       />
     );
     const filteredItems = this.state.filterValue === '' ? items : this.filterItems(items);
