@@ -10,13 +10,17 @@ import './title-input.component.scss';
 export default class TitleInput extends React.PureComponent {
   static propTypes = {
     input: PropTypes.element.isRequired,
+    isClearable: PropTypes.bool,
     isOpen: PropTypes.bool,
     onClear: PropTypes.func,
+    onFocus: PropTypes.func,
   };
 
   static defaultProps = {
+    isClearable: false,
     isOpen: false,
     onClear: () => {},
+    onFocus: () => {},
   };
 
   renderToggleIcon = () => {
@@ -27,12 +31,13 @@ export default class TitleInput extends React.PureComponent {
   }
 
   render() {
-    const { input, onClear } = this.props;
+    const { input, isClearable, onClear, onFocus } = this.props;
+    const className = `oc-input-group-icon-remove${isClearable ? '' : ' disabled'}`;
     return (
       <InputGroup>
         {input}
         <InputGroup.Addon
-          className="oc-input-group-icon-remove"
+          className={className}
           onClick={onClear}
         >
           <Icon
@@ -44,7 +49,7 @@ export default class TitleInput extends React.PureComponent {
         </InputGroup.Addon>
         <InputGroup.Addon
           className="oc-input-group-icon-toggle"
-          onClick={onClear}
+          onClick={onFocus}
         >
           {this.renderToggleIcon()}
         </InputGroup.Addon>

@@ -3,6 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* Changed multiselect dropdown input appearance
 
 ## 2.2.1
 * Upgrade all packages that can be upgraded

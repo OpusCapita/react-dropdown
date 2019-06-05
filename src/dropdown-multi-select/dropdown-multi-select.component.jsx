@@ -141,8 +141,10 @@ export default class DropdownMultiSelect extends React.PureComponent {
     const title = (
       <TitleInput
         input={input}
-        onClear={this.handleClear}
+        isClearable={(checkedItems && checkedItems.size !== 0)}
         isOpen={isOpen}
+        onClear={this.handleClear}
+        onFocus={this.focusInput}
       />
     );
     const filteredItems = this.state.filterValue === '' ? items : this.filterItems(items);
