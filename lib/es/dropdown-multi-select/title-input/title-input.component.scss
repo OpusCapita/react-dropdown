@@ -1,4 +1,31 @@
-.oc-input-group-icon-remove {
-  height: 34px;
-  padding: 2px 8px 0 8px!important;
-}      
+@import '~@opuscapita/oc-cm-common-styles/styles/colors';
+
+.oc-dropdown-multi-select {
+  .oc-input-group-input.form-control {
+    border: 0;
+    padding: 6px 10px;
+    box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, 0.075);
+
+    &:focus {
+      box-shadow: none;
+      border: 0;
+    }
+  }
+
+  .input-group-addon {
+    background-color: $oc-color-white;
+    box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, 0.075);
+    padding: 2px 5px 0 5px;
+    border: 0;
+    color: $oc-color-azure;
+    height: 34px;
+
+    &.oc-input-group-icon-remove.disabled svg {
+      opacity: 0;
+    }
+
+    &.oc-input-group-icon-toggle {
+      padding-right: 10px;
+    }
+  }
+}
