@@ -31,7 +31,12 @@ export default class TitleInput extends React.PureComponent {
   }
 
   render() {
-    const { input, isClearable, onClear, onFocus } = this.props;
+    const {
+      input,
+      isClearable,
+      onClear,
+      onFocus,
+    } = this.props;
     const className = `oc-input-group-icon-remove${isClearable ? '' : ' disabled'}`;
     return (
       <InputGroup>
