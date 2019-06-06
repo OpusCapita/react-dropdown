@@ -3,6 +3,8 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+
+## 2.2.5
 * Fix: if multiselect isClearable is false, then clearing is disabled, tiny styling details
 
 ## 2.2.4
