@@ -3,6 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* Added possibility to set multiselect unclearable
 
 ## 2.2.3
 * Fixed multiselect input height

@@ -18,6 +18,7 @@ export default class DropdownMultiSelect extends React.PureComponent {
     checkedItems: ImmutablePropTypes.list,
     defaultPlaceholder: PropTypes.string,
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    isClearable: PropTypes.bool,
     items: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string.isRequired,
       labelPlaceholder: PropTypes.string,
@@ -34,6 +35,7 @@ export default class DropdownMultiSelect extends React.PureComponent {
   static defaultProps = {
     checkedItems: List(),
     defaultPlaceholder: '{N} items selected',
+    isClearable: true,
     onChange: () => {},
     tabIndex: 1,
   };
@@ -117,6 +119,7 @@ export default class DropdownMultiSelect extends React.PureComponent {
   render() {
     const {
       id,
+      isClearable,
       items,
       checkedItems,
       onChange,
@@ -141,7 +144,7 @@ export default class DropdownMultiSelect extends React.PureComponent {
     const title = (
       <TitleInput
         input={input}
-        isClearable={(checkedItems && checkedItems.size !== 0)}
+        isClearable={isClearable && (checkedItems && checkedItems.size !== 0)}
         isOpen={isOpen}
         onClear={this.handleClear}
         onFocus={this.focusInput}

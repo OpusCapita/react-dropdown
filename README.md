@@ -63,12 +63,13 @@ Also you need to configure sass loader, since all the styles are in sass format.
 | onClick                  | function          |                                          | Callback function of click               |
 | title                    | number, string or element |                                  | Title of the dropdown menu item          |
 | type                     | string            |                                          | Enumeration either 'item' or 'divider'   |
-           
+
 #### DropdownMultiSelect
 
 | Prop name                | Type              | Default                                  | Description                              |
 | ------------------------ | ----------------- | ---------------------------------------- | ---------------------------------------- |
 | id                       | number or string  | required                                 | Unique HTML id attribute                 |
+| isClearable              | boolean           | true                                     | If false, selection cannot be empty      |
 | items                    | array of items    | required                                 | Dropdown menu items                      |
 | checkedItems             | List              | empty list                               | Checked items                            |
 | defaultPlaceholder       | string            | '{N} items selected'                     | Default placeholder                      |
@@ -86,7 +87,7 @@ Also you need to configure sass loader, since all the styles are in sass format.
 ### Code example
 ```jsx
 import React from 'react';
-import { 
+import {
   DropdownContainer,
   DropdownMenu,
   DropdownMultiSelect,
@@ -126,7 +127,7 @@ export default class ReactView extends React.Component {
         <div>
           CONTENT
         </div>
-      </DropdownContainer>      
+      </DropdownContainer>
       <DropdownMenu
         id="example"
         menuItems={[
