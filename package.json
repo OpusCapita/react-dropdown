@@ -1,7 +1,7 @@
 {
   "author": "OpusCapita (www.opuscapita.com)",
   "name": "@opuscapita/react-dropdown",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "private": false,
   "license": "MIT",
   "description": "OpusCapita react dropdown component",
