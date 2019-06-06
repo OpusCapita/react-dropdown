@@ -92,9 +92,10 @@ export default class DropdownMultiSelect extends React.PureComponent {
   }
 
   handleClear = () => {
+    const { checkedItems, isClearable, onChange } = this.props;
     this.preventToggle = true;
-    if (this.props.checkedItems.size > 0) {
-      this.props.onChange(List());
+    if (isClearable && checkedItems.size > 0) {
+      onChange(List());
     }
   }
 
