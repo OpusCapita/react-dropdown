@@ -3,6 +3,8 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+
+## 2.2.4
 * Added possibility to set multiselect unclearable
 
 ## 2.2.3
