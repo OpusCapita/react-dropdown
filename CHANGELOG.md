@@ -3,6 +3,7 @@
 * In general follow (https://docs.npmjs.com/getting-started/semantic-versioning) versioning.
 
 ## <next>
+* Fixed multiselect input height
 
 ## 2.2.2
 * Changed multiselect dropdown input appearance
